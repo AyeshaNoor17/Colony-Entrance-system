@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00F7E96B-42EF-4C59-9A68-797B2F027F73}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bahria_Entrance</RootNamespace>
+    <AssemblyName>Bahria_Entrance</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAL\Resident.cs" />
+    <Compile Include="BAL\Visitor.cs" />
+    <Compile Include="DAL\DbQueries.cs" />
+    <Compile Include="PAL\AddResident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\AddResident.Designer.cs">
+      <DependentUpon>AddResident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\AddVisitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\AddVisitor.Designer.cs">
+      <DependentUpon>AddVisitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\BahriaEntrance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\BahriaEntrance.Designer.cs">
+      <DependentUpon>BahriaEntrance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\ResidentDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\ResidentDelete.Designer.cs">
+      <DependentUpon>ResidentDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\ResisdentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\ResisdentForm.Designer.cs">
+      <DependentUpon>ResisdentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\SearchResident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\SearchResident.Designer.cs">
+      <DependentUpon>SearchResident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\UpdateVisitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\UpdateVisitor.Designer.cs">
+      <DependentUpon>UpdateVisitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\VisitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\VisitorForm.Designer.cs">
+      <DependentUpon>VisitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PAL\AddResident.resx">
+      <DependentUpon>AddResident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\AddVisitor.resx">
+      <DependentUpon>AddVisitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\BahriaEntrance.resx">
+      <DependentUpon>BahriaEntrance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\ResidentDelete.resx">
+      <DependentUpon>ResidentDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\ResisdentForm.resx">
+      <DependentUpon>ResisdentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\SearchResident.resx">
+      <DependentUpon>SearchResident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\UpdateVisitor.resx">
+      <DependentUpon>UpdateVisitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\VisitorForm.resx">
+      <DependentUpon>VisitorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bahria-town-logo-D1A3F8C43C-seeklogo.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrance_arch-1008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrance_arch-1035.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-02-20 at 4.53.26 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d47b20aad77ff69e2b25117153c48950.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d73aea0f7e1c4e45d248c4066d3d5e6e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-02-20 at 4.25.23 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-02-20 at 5.40.26 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-02-20 at 4.53.45 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple-Minimalist-Background-Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-vector-background-bright-infinite-tunnel-glowing-segments_395079-7486.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gF0HJ.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1190671385-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1352411932-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-02-20 at 7.14.50 PM.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
